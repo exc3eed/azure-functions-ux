@@ -88,13 +88,12 @@ export class MainComponent implements AfterViewInit, OnDestroy {
     }
 
     ngAfterViewInit() {
+        this._globalStateService.GlobalBusyStateComponent = this.busyStateComponent;
+        this._busyStateScopeManager = this.busyStateComponent.getScopeManager();
 
         this._userService.getStartupInfo()
             .first()
             .subscribe(info => {
-                this._globalStateService.GlobalBusyStateComponent = this.busyStateComponent;
-                this._busyStateScopeManager = this.busyStateComponent.getScopeManager();
-
                 this.ready = true;
 
                 this._portalService.sendTimerEvent({

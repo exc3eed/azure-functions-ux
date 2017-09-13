@@ -49,6 +49,10 @@
     }
 }
 
+:host-context(#app-root[theme=dark]) .multi-select-content{
+    background-color: $chrome-color-dark;
+}
+
 .multi-select-arrow {
     display: block;
     font-size: 0;

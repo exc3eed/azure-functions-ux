@@ -50,19 +50,26 @@
     }
 }
 
+:host-context(#app-root[theme=dark]){
+    .tree-node{
+        &:hover{
+            background-color: $tree-node-hover-color-dark;
+        }
+    
+        &.selected{
+            background-color: $tree-node-selection-color-dark;
+        }
+    }
+}
+
 .tree-node-menu{
     font-size: 20px;
-    color: $primary-color;
     position: absolute;
     top: 4px;
     right: 5px;
 
     i{
         margin-left: 5px;
-        
-        &:hover{
-            color: $primary-color-hover;
-        }
     }
 }
 
@@ -84,7 +91,6 @@ hr.tree-node-separator{
     margin-left: 12px;
     font-size: 14px;
     width: 15px;
-    color: $primary-color;
 }
 
 .tree-node-refresh-icon{

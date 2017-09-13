@@ -12,6 +12,10 @@
     border-right: $border;
 }
 
+:host-context(#app-root[theme=dark]) .sidenav{
+    background-color: $chrome-color-dark;
+}
+
 .sidenav-try{
     height: calc(100% - $top-bar-height);
     top: $top-bar-height;

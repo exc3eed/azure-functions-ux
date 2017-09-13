@@ -143,7 +143,7 @@ export class FunctionIntegrateNode extends FunctionEditBaseNode {
             functionInfo.functionApp.site.id + '/functions/' + functionInfo.name + '/integrate',
             parentNode);
 
-        this.iconClass = 'fa fa-flash tree-node-function-edit-icon';
+        this.iconClass = 'fa fa-flash tree-node-function-edit-icon link';
     }
 }
 
@@ -162,7 +162,7 @@ export class FunctionManageNode extends FunctionEditBaseNode implements Removabl
             functionInfo.functionApp.site.id + '/functions/' + functionInfo.name + '/manage',
             parentNode);
 
-        this.iconClass = 'fa fa-cog tree-node-function-edit-icon';
+        this.iconClass = 'fa fa-cog tree-node-function-edit-icon link';
     }
 
     public remove() {
@@ -191,6 +191,6 @@ export class FunctionMonitorNode extends FunctionEditBaseNode {
             functionInfo.functionApp.site.id + '/functions/' + functionInfo.name + '/monitor',
             parentNode);
 
-        this.iconClass = 'fa fa-search tree-node-function-edit-icon';
+        this.iconClass = 'fa fa-search tree-node-function-edit-icon link';
     }
 }
