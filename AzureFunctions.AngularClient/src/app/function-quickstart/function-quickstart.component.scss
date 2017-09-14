@@ -1,4 +1,4 @@
-@import '../../sass/main';
+@import '../../sass/common/variables';
 
 #quickstart-container{
     text-align: center;
@@ -25,11 +25,11 @@
         height: 75px;
     }
 
-    .text-main2-heading{
+    h1{
         margin: 15px 0px 25px 0px;
     }
 
-    .text-level1-heading{
+    h2{
         margin-bottom: 10px;
     }
 
@@ -95,7 +95,6 @@
 }
 
 #quickstart-lang-radios{
-    @extend .text-subheading;
     margin-bottom: 15px;
     color: $value-text-color;
 
@@ -124,7 +123,7 @@
     color: $body-bg-color;
     background-color: $qs-footer-bg-color;
 
-    .text-main2-heading{
+    h1{
         margin-top: 0px;
         color: $body-bg-color;
     }

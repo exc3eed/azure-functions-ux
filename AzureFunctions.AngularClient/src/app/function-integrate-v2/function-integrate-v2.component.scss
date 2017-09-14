@@ -1,4 +1,4 @@
-@import '../../sass/main';
+@import '../../sass/common/variables';
 
 .list-group-item{
     border-radius: 0;
@@ -24,7 +24,6 @@
 }
 
 .column-title{
-    @extend .text-level1-heading;
     margin-top: 20px;
     margin-bottom: 10px;
 }

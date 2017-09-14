@@ -1,4 +1,4 @@
-@import '../../../sass/main';
+@import '../../../sass/common/variables';
 
 #site-config-wrapper{
     padding: 5px 20px;
@@ -46,7 +46,6 @@ td{
 }
 
 h3{
-    @extend .text-level2-heading;
     font-weight: bold;
     margin-left: 0px;
     margin-bottom: 10px;

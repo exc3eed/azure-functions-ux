@@ -10,6 +10,10 @@ body {
     height: 100%;
 }
 
+.foo-class{
+    background-color: WHITE;
+}
+
 pre {
     display: block;
     padding: 5px;
@@ -27,19 +31,6 @@ pre {
 
 .clickable {
     cursor: pointer;
-}
-
-.link{
-    cursor: pointer;
-    color: $primary-color;
-}
-
-#app-root[theme=dark] .link{
-    color: $primary-color-dark;
-
-    &:hover{
-        color: $primary-color-hover-dark;
-    }
 }
 
 :focus{

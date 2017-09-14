@@ -20,11 +20,13 @@
             [attr.aria-selected]="info.active ? 0 : -1">
 
             <img *ngIf="info.iconUrl" [src]="info.iconUrl" />
-            <span *ngIf="info.dirty">* </span><span [class.tab-diry]="info.dirty">{{info.title}}</span>
+            <h4>
+                <span *ngIf="info.dirty">* </span><span [class.tab-diry]="info.dirty">{{info.title}}</span>
 
-            <span *ngIf="info.closeable" class="close-button" (click)="closeTab(info)">
-                <i class="fa fa-times" aria-hidden="true"></i>
-            </span>
+                <span *ngIf="info.closeable" class="close-button" (click)="closeTab(info)">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </span>
+            </h4>
             <div class="bottom" *ngIf="info.active && info.closeable"></div>
         </div>
     </nav>

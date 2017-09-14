@@ -1,33 +1,33 @@
 <div>
     <div class="col-md-4" heigth="100%">
         <div class="text-center">
-            <div class="column-title">
+            <h2 class="column-title">
                 {{ 'trigger' | translate }}
                 <pop-over [position]="'bottom'" [message]="'integrate_triggersHelp' | translate">
                     <span class="glyphicon glyphicon-info-sign button-title"></span>
                 </pop-over>
-            </div>
+            </h2>
         </div>
     </div>
     <div class="col-md-4">
         <div class="text-center">
-            <div class="column-title">
+            <h2 class="column-title">
             {{ 'input' | translate }}
                 <pop-over [position]="'bottom'" [message]="'integrate_inputsHelp' | translate">
                     <span class="glyphicon glyphicon-info-sign button-title"></span>
                 </pop-over>
-            </div>
+            </h2>
         </div>
     </div>
     <div class="col-md-4">
         <div class="clickable pull-right" id="toggle-editor" (click)="onEditorChange('advanced')"><i class="fa fa-edit"></i> {{ 'functionIntegrate_advancedEditor' | translate }}</div>
         <div class="text-center">
-            <div class="column-title">
+            <h2 class="column-title">
             {{ 'output' | translate }}
                 <pop-over [position]="'bottom'" [message]="'integrate_outputsHelp' | translate">
                     <span class="glyphicon glyphicon-info-sign button-title"></span>
                 </pop-over>
-            </div>
+            </h2>
         </div>
     </div>
 </div>
