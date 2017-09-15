@@ -13,6 +13,7 @@ import { Router, ActivatedRoute } from '@angular/router';
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, AfterViewInit {
+    theme: string;
 
     @ViewChild(BusyStateComponent) busyStateComponent: BusyStateComponent;
 
@@ -32,20 +33,27 @@ export class AppComponent implements OnInit, AfterViewInit {
         // tree logic in order to get it working properly
         if (_globalStateService.showTryView) {
 
-            this._router.navigate(['/try'], { queryParams: Url.getQueryStringObj()});
+            this._router.navigate(['/try'], { queryParams: Url.getQueryStringObj() });
 
         } else if (!this._userService.inIFrame
             && window.location.protocol !== 'http:'
             && !this._userService.inTab
             && !configService.isStandalone()) {
 
-            this._router.navigate(['/landing'], { queryParams: Url.getQueryStringObj()});
+            this._router.navigate(['/landing'], { queryParams: Url.getQueryStringObj() });
 
         } else {
-
-            this._router.navigate(['/resources/apps'], { queryParams: Url.getQueryStringObj()});
-
+            this._router.navigate(['/resources/apps'], { queryParams: Url.getQueryStringObj() });
         }
+
+        this._userService.getStartupInfo()
+            .subscribe(info => {
+                if (info.theme !== 'dark') {
+                    this.theme = 'light';
+                } else {
+                    this.theme = 'dark';
+                }
+            });
     }
 
     ngOnInit() {
