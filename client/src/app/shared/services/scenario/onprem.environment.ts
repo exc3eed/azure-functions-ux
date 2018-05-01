@@ -38,8 +38,8 @@ export class OnPremEnvironment extends Environment {
             }
         };
 
-        this.scenarioChecks[ScenarioIds.remoteDebugging] = {
-            id: ScenarioIds.remoteDebugging,
+        this.scenarioChecks[ScenarioIds.enableRemoteDebugging] = {
+            id: ScenarioIds.enableRemoteDebugging,
             runCheck: () => {
                 return { status: 'disabled' };
             }

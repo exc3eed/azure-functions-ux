@@ -318,7 +318,7 @@ export class GeneralSettingsComponent extends ConfigSaveComponent implements OnC
                 FTPAccessSupported = false;
             }
 
-            if (this._scenarioService.checkScenario(ScenarioIds.remoteDebugging).status === 'disabled') {
+            if (this._scenarioService.checkScenario(ScenarioIds.enableRemoteDebugging).status === 'disabled') {
                 remoteDebuggingSupported = false;
             }
 
